@@ -1,0 +1,77 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url("../img/intro-bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: black;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden
+}
+
+            /* SCROLL */
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #00ADEE;
+    border-radius: 4px;
+  
+}
+
+
+h1 {
+    color: black;
+    display: block;
+    font-size: 3vmax;
+    font-weight: 500;
+    padding: 50px auto;
+    text-align: center;
+}
+
+.animate__animated.animate__fadeIn{
+    animation-duration: 3s;
+}
+
+.box{
+    width: 100vw;
+    background-color: #ffffff;
+}
+
+.page-container{
+    margin: 0;
+}
+
+
+.wsp-icon{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    transition-duration: 2s;
+}
+
+.wsp-icon:hover{
+    filter: brightness(70%);
+}
+
