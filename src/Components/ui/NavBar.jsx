@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import React from 'react';
 // import { SearchNavBar } from '../search/SearchNavBar'
 // import { NavBarLog } from './NavBarLog'
 import sertic_contorno from '../../img/sertic_contorno.png';
+import '../../css/navbar.css';
 
 
 
@@ -42,50 +42,54 @@ export const NavBar = () => {
                   <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
 
                     <li className='nav-item'>
-                      <NavLink 
-                          activeClassName='active'
+                      <a 
+                          activeclassname='active'
                           className='nav-item nav-link' 
-                          exact
-                          to='#inicio'
+                          href='#inicio'
                       >
                           Inicio
-                      </NavLink>
+                      </a>
                     </li>
 
                     <li className='nav-item'>
-                      <NavLink 
-                          activeClassName='active'
+                      <a 
+                          activeclassname='active'
                           className='nav-item nav-link' 
-                          exact
-                          to='#nosotros'
+                          href='#nosotros'
                       >
                           Nosotros
-                      </NavLink>
+                      </a>
                     </li>
 
                     <li className='nav-item'>
-                      <NavLink 
-                          activeClassName='active'
+                      <a 
+                          activeclassname='active'
                           className='nav-item nav-link' 
-                          exact
-                          to='#inicio'
+                          href='#servicios'
                       >
-                          Inicio
-                      </NavLink>
+                          Servicios
+                      </a>
                     </li>
 
                     <li className='nav-item'>
-                      <NavLink 
-                          activeClassName='active'
+                      <a 
+                          activeclassname='active'
                           className='nav-item nav-link' 
-                          exact
-                          to='#inicio'
+                          href='#clientes'
                       >
-                          Inicio
-                      </NavLink>
+                          Clientes
+                      </a>
                     </li>
 
-                    
+                    <li className='nav-item'>
+                      <a 
+                          activeclassname='active'
+                          className='nav-item nav-link' 
+                          href='#contacto'
+                      >
+                          Contacto
+                      </a>
+                    </li>
 
                   </ul>
 

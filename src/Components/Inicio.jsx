@@ -5,7 +5,10 @@ import '../css/inicio.css';
 
 export const Inicio = () => {
   return (
-  <div className='d-flex container justify-content-center'>
+  <div 
+    id='inicio' 
+    className='d-flex container justify-content-center'
+  >
       <figure className='logo'> 
         <img 
           className='animate__animated animate__fadeInUp'

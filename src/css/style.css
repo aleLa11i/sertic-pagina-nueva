@@ -21,7 +21,7 @@ body {
     background-image: url("../img/intro-bg.jpg");
     background-size: cover;
     background-attachment: fixed;
-    color: black;
+    color: rgb(0, 0, 0);
     background-size: cover;
     background-attachment: fixed;
     overflow-x: hidden
@@ -41,7 +41,7 @@ body::-webkit-scrollbar-thumb {
 
 
 h1 {
-    color: black;
+    color: rgb(0, 0, 0);
     display: block;
     font-size: 3vmax;
     font-weight: 500;
@@ -73,5 +73,23 @@ h1 {
 
 .wsp-icon:hover{
     filter: brightness(70%);
+}
+
+button {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    width: 200px;
+    color: white;
+    background-color: #00ADEE;
+    border-radius: 3px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: all 300ms;
+}
+button:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 0px 10px;
 }
 

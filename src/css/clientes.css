@@ -1,63 +1,63 @@
-.clientes {
-    margin-top: 70px;
-    padding: 30px 0;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.clientes{
+  margin-top: 200px;
+  margin-bottom: 200px;
 }
 
-.clientes h1 {
-    color: #eee;
+.slick-prev:before,
+.slick-next:before {
+  position: relative;
+  color: black;
+  font-size: 40px;
+  pointer-events: none;
 }
 
-.cont {
-    width: 90%;
-    overflow: hidden;
-    margin-bottom: 30px;
+.slick-next:hover,
+.slick-prev:hover{
+    transform: none;
+    box-shadow: none;
+    margin: none;
+    padding: none;
 }
 
-.clientes-contenedor {
-    display: flex;
-    flex-direction: row;
-    animation-name: slide;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    position: relative;
-    z-index: 1;
+.slick-next{
+    right: -50px;
 }
 
-.contenedor-item {
-    margin: 40px;
-    background-color: #fff;
-    border-radius: 5px;
-    min-width: 200px;
-    width: 200px;
-    height: 200px;
-    text-align: center; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.slick-prev{
+  left: -50px;
 }
 
+.client{
+  margin: 10px;
+  padding: 30px;
+  width: 300px;
+  outline: 1px solid rgba(0, 0, 0, 0.158);
+  background-color: #fafafa;
+  border-radius: 10px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transition-duration: all 0.5s;
+  text-decoration: none;
+  color: black;
+}
 
-.contenedor-item img{
-    width: 100%;
-    border-radius: 5px;
- }
+.client:hover{ 
+   background-color: #dbdada;
+}
 
+.client img{
+  margin-bottom: 50px;
+}
 
-.contenedor-item:hover {
-     box-shadow: 0 9px 20px #000;
-     transform: scale(1.01);
- }
+.client h5{
+  position: absolute;
+  bottom: 20px;
+}
 
-
- @keyframes slide {
-     
-    0% {transform: translateY(0);}
-    
-    100% {transform: translateX(calc(-2230px + 100%));}
- }
+.client h5:hover{
+  color:black;
+}

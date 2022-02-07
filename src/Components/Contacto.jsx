@@ -72,7 +72,6 @@ export const Contacto = () => {
 
                 <button 
                   type='button' 
-                  className='btn-primary'
                 > 
                   enviar 
                 </button>
