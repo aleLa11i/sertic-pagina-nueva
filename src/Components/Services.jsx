@@ -1,13 +1,14 @@
 import React from 'react';
 import '../css/servicios.css'
 import { ReturnService } from './ReturnService';
+import { faCode, faCloud, faLock, faWrench, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
 
 export const Services = () => {
   return (
     <div id='servicios'>
       <section className='servicios'>
             <h1 
-                className='servicios-titulo'
+                className='m-5'
             >
                 Nuestros Servicios
             </h1>
@@ -16,6 +17,7 @@ export const Services = () => {
 
             <ReturnService 
                 title='Soluciones IT' 
+                icon={ faLock }
                 description={
                     <>
                         Consultoría Informática
@@ -35,6 +37,7 @@ export const Services = () => {
 
             <ReturnService 
                 title='Soporte Informático' 
+                icon={ faWrench }
                 description={
                     <>
                         Mantenimiento técnico correctivo y preventivo.
@@ -54,6 +57,7 @@ export const Services = () => {
 
             <ReturnService 
                 title='Virtualización y Cloud' 
+                icon={ faCloud }
                 description={
                     <>
                         Virtualización de servidores
@@ -70,6 +74,7 @@ export const Services = () => {
 
             <ReturnService 
                 title='Conectividad y Redes' 
+                icon={ faNetworkWired }
                 description={
                     <>
                         Configuración de redes LAN y WAN
@@ -88,6 +93,7 @@ export const Services = () => {
 
             <ReturnService 
                 title='Desarrollo de software' 
+                icon={ faCode }
                 description={
                     <>
                         Desarrollo web y mobile

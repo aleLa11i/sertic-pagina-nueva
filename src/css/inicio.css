@@ -1,12 +1,18 @@
+.inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .logo {
     padding: 150px;
     text-align: center;
     align-items: center;
+    justify-content: center;
 }
 
-
-hr{
-    background-color: white;
-    margin-bottom: 30px;
+.logo img{
+    width: 600px;
 }
 

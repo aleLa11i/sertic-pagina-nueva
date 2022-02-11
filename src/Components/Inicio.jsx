@@ -7,17 +7,16 @@ export const Inicio = () => {
   return (
   <div 
     id='inicio' 
-    className='d-flex container justify-content-center'
+    className='inicio'
   >
       <figure className='logo'> 
         <img 
           className='animate__animated animate__fadeInUp'
-          height='350' 
           src={ sertic_contorno } 
           alt='Logo SerTIC'
         />
 
-        <hr />
+        <hr style={{'backgroundColor':'white'}} />
 
         <div
           className='animate__animated animate__fadeInUp row'
@@ -29,7 +28,7 @@ export const Inicio = () => {
           >
             <button 
               type='button' 
-              className='btn-lg btn-primary'
+              className='btn-primary'
             > 
               LinkedIn 
             </button>
@@ -42,7 +41,7 @@ export const Inicio = () => {
           >
             <button 
               type='button' 
-              className='btn-lg btn-success'
+              className='btn-success'
             > 
               WhatsApp 
             </button>

@@ -10,7 +10,9 @@ export const Cliente = ({ link, img, name }) => {
             src={ img } 
             alt={ name }
         />
-      <h5>{ name }</h5>
+      <h4
+        className='animate__animated animate__fadeInUp'
+      >{ name }</h4>
       </a>
     </div>
   );

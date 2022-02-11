@@ -4,15 +4,11 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-}
-
-html {
-    scroll-behavior: smooth;
+    border: 0;
 }
 
 body {
     margin: 0;
-    padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
@@ -43,7 +39,7 @@ body::-webkit-scrollbar-thumb {
 h1 {
     color: rgb(0, 0, 0);
     display: block;
-    font-size: 3vmax;
+    font-size: 50px;
     font-weight: 500;
     padding: 50px auto;
     text-align: center;
@@ -54,37 +50,33 @@ h1 {
 }
 
 .box{
+    border: none;
     width: 100vw;
     background-color: #ffffff;
 }
 
+.hr-box{
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+
 .page-container{
     margin: 0;
-}
-
-
-.wsp-icon{
-    border-radius: 50%;
-    object-fit: cover;
-    width: 100px;
-    height: 100px;
-    transition-duration: 2s;
-}
-
-.wsp-icon:hover{
-    filter: brightness(70%);
+    padding: 0;
+    width: 100vw;
 }
 
 button {
     font-size: 20px;
     border: none;
     outline: none;
-    padding: 15px;
-    width: 200px;
+    width: 120px;
+    height: 45px;
     color: white;
     background-color: #00ADEE;
     border-radius: 3px;
-    margin: 20px 0;
+    margin: 5px 0;
     cursor: pointer;
     transition: all 300ms;
 }
@@ -92,4 +84,3 @@ button:hover {
     transform: scale(1.05);
     box-shadow: rgba(0, 0, 0, 0.9) 0px 0px 10px;
 }
-

@@ -1,30 +1,27 @@
 import React from 'react';
-import '../../css/clientes.css';
+import '../css/clientes.css';
 import Slider from 'react-slick';
 import { Cliente } from './ReturnCliente';
-import inta from '../../img/inta.png';
-import konecta from '../../img/konecta.svg';
-import mec from '../../img/mec.png';
-import leti from '../../img/leti.png';
-import polo from '../../img/polo.png';
-import autopista from '../../img/autopista.png';
-import motorx from '../../img/logo-motorx.svg';
-import expoagro_logo from '../../img/expoagro_logo.png';
+import inta from '../img/inta.png';
+import konecta from '../img/konecta.svg';
+import mec from '../img/mec.png';
+import leti from '../img/leti.png';
+import polo from '../img/polo.png';
+import autopista from '../img/autopista.png';
+import motorx from '../img/logo-motorx.svg';
+import expoagro_logo from '../img/expoagro_logo.png';
 
-
+const settings = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  autoplay: true,
+  speed: 3000,
+  autoplaySpeed: 2000
+};
 
 export const Clientes = () => {
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    autoplay: true,
-    speed: 3000,
-    autoplaySpeed: 2000
-  };
-
 
   return (
     <div 
@@ -32,9 +29,9 @@ export const Clientes = () => {
       className='container clientes'
     >
       <h1>
-          Empresas que confían en 
-          <br/> SerTIC
-          <hr /> 
+        Empresas que confían en 
+        <br/> SerTIC
+        <hr /> 
       </h1>
       <Slider {...settings}>
               <Cliente 

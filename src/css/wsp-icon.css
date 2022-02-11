@@ -1,0 +1,11 @@
+.wsp-icon{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 70px;
+    height: 70px;
+    transition-duration: 2s;
+}
+
+.wsp-icon:hover{
+    filter: brightness(70%);
+}
