@@ -1,0 +1,24 @@
+.language {
+    padding-right: 40px;
+    font-size: 1em;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+.language div{
+    padding: 0px 5px;
+}
+
+.language div:hover{
+    color: #00ADEE;
+    cursor: pointer;
+}
+
+@media screen and (max-device-width: 1000px) and (max-width: 1000px) {
+    .language {
+        font-size: 0.9em;
+        position: relative;
+        left: -20px;
+    }
+}

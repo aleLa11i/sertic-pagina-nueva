@@ -1,18 +1,32 @@
 .clientes{
-  margin-top: 150px;
+  margin-top: 200px;
   margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .clientes h1{
   margin: 100px;
 }
 
+.slick-slider{
+  width: 80vw;
+}
+
+.slick-slider button{
+  width: 30px;
+  height: 30px;
+  font-size: 0px;
+  transform: none;
+}
+
 .slick-prev:before,
 .slick-next:before {
   position: relative;
   color: black;
-  font-size: 30px;
+  font-size: 50px;
   pointer-events: none;
 }
 
@@ -25,11 +39,11 @@
 }
 
 .slick-next{
-    right: -50px;
+    right: -70px;
 }
 
 .slick-prev{
-  left: -50px;
+  left: -70px;
 }
 
 .box-client{
@@ -39,13 +53,13 @@
 }
 
 .client{
-  margin: 5px;
-  padding: 30px;
+  margin: 5px 0px;
+  padding: 20px;
   width: 300px;
+  height: 300px;
   outline: 1px solid rgba(0, 0, 0, 0.158);
   background-color: #fafafa;
   border-radius: 10px;
-  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,3 +92,69 @@
   bottom: 0px;
 }
 
+@media screen and (max-device-width: 1000px) and (max-width: 1000px){
+
+  .clientes{
+    display: flex;
+    flex-direction: column;      
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.client{
+    margin: 1px ;
+    padding: 0px ;
+    width: 30vw ;
+    height: 30vw ;
+}
+
+
+
+.client img{
+    width: 70% !important;
+}
+
+.client h4{
+    visibility: hidden !important;
+}
+
+.client:hover > img{ 
+    filter: none !important;
+}
+
+.clientes h1 {
+  margin: 2px;
+}
+
+
+.slick-slider{
+    width: 80vw !important;
+    height: 30vw !important;
+}
+
+.slick-slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+}
+  .clientes{
+      position: relative;
+      margin: 0px 0px 500px 0px;
+      top:200px;
+  }
+
+
+  .slick-next{
+    right: -30px;
+  }
+
+  .slick-prev{
+    left: -30px;
+  } 
+
+  .slick-prev:before,
+  .slick-next:before{
+      font-size: 30px !important;
+  }
+}

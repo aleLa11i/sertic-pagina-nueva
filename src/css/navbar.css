@@ -1,3 +1,8 @@
-.navbar-light .navbar-nav .nav-link:hover {
-    border-bottom: 1px solid black ;
+.navbar{
+    transition-duration: all 2s;
 }
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #1ce;
+}
+

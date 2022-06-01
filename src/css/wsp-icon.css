@@ -1,11 +1,29 @@
+#wsp{
+    display: none;
+}
+
 .wsp-icon{
-    border-radius: 50%;
     object-fit: cover;
-    width: 70px;
-    height: 70px;
-    transition-duration: 2s;
+    transition-duration: 1s;
+    cursor: pointer;   
 }
 
 .wsp-icon:hover{
     filter: brightness(70%);
 }
+
+
+@media screen and (max-device-width: 1300px) {
+    .wsp-icon{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* @media screen and (max-device-width: 700px) and (max-width: 700px){
+
+    .wsp-icon{
+        width: 60px;
+        height: 60px;
+    }
+} */

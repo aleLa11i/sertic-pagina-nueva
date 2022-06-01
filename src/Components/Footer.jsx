@@ -2,15 +2,19 @@ import React from 'react';
 import '../css/footer.css';
 import { faMapMarkedAlt, faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
+
+    const [t] = useTranslation("global");
+
   return (
     <>
     <div className='footer-above'>
             <div className='footer-columns'> 
                 <h3> 
                     <FontAwesomeIcon icon={faMapMarkedAlt} className='icons' />
-                    Ubicación 
+                    { t("Footer.location") }
                     <hr color='#1ce'/>
                 </h3>
                 <p className='footer-info'>Urquiza 1285 PA <br/> S2000ANI - Rosario - Argentina</p>
@@ -19,7 +23,7 @@ export const Footer = () => {
             <div className='footer-columns'>
                 <h3> 
                     <FontAwesomeIcon icon={faPhoneAlt} className='icons' />
-                    Teléfono 
+                    { t("Footer.phone") } 
                     <hr color='#1ce'/>
                 </h3>
                 
@@ -29,7 +33,7 @@ export const Footer = () => {
             <div className='footer-columns'>
                 <h3> 
                     <FontAwesomeIcon icon={faEnvelope} className='icons' />
-                    E-mail 
+                    { t("Footer.email") }
                     <hr color='#1ce'/>
                 </h3>
                 <p className='footer-info'>contacto@sertic.com.ar</p>
