@@ -1,10 +1,11 @@
 import Swal from 'sweetalert2';
-import { sendData } from './contact-form';
+import emailjs from 'emailjs-com';
 
-export const onSubmit = async ( form , setForm, t, setLoading ) => {
-    const { name, email, text, phone } = form;
+export const onSubmit = async ( formData, form , setFormData, t, setLoading ) => {
+    const { name, email, message, phone } = formData;
 
-    if( !name.trim() || !email.trim() || !text.trim() || !phone.trim() )
+    // Si hay campos vacios arroja cartel de error
+    if( !name.trim() || !email.trim() || !message.trim() || !phone.trim() )
     {
       Swal.fire({
         title: 'Error!',
@@ -15,38 +16,32 @@ export const onSubmit = async ( form , setForm, t, setLoading ) => {
       setLoading( false );
     }
     else{
-        
-        const res = await sendData( form )
-      if( res.ok ){
+      emailjs.sendForm('landingpage', 'templateweb', form.current, 'vthU-NiNWU4gM6DSq')
+      .then(() => {
+          // Si está OK, arroja cartel de éxito y blanquea los campos del formulario
           Swal.fire({
             title: 'Excelente!',
             text: t("Contact.success"),
             icon: 'success',
             confirmButtonText: 'Ok'
           })
-          setForm({
-            ...form,
+          setFormData({
+            ...formData,
             name:'',
             email:'',
-            text:'',
+            message:'',
             phone:''
           })
-        setLoading( false );
-      }
-      else
-      {
-        setLoading( false );
-        console.log(res);
-        const { errors, error, msg } = res;
-        const text = errors?.email?.msg || errors?.phone?.msg || error?.msg || msg 
-        console.log(text);
+          setLoading( false );
+
+      }, ({ text }) => {
+        // En caso de error arroja cartel con mensaje de error traido de la petición
         Swal.fire({
           title: 'Error!',
           text,
           icon: 'error',
           confirmButtonText: 'Ok'
         })
-
-      }
+      });
     };
 };

@@ -3,9 +3,6 @@
     align-items: center;
 }
 
-#contacto{
-    border: 0.2px solid rgb(182, 181, 181);
-}
 
 .background-image{
     background-image: url("../../assets/sertic_fondo.jpeg");
@@ -19,13 +16,10 @@
 }
 
 .form-container {
-    background-color: white;
-    outline: 1px solid rgba(0, 0, 0, 0.158);
+    outline: 1.8px solid rgb(95, 95, 95);
     position: absolute;
-    width: 20vw;
-    height: 30vh;
-    padding: 30px;
-    /* border-radius: 2%; */
+    width: 47vw;
+    height: 90vh;   
 }
 
 .form-container form input,

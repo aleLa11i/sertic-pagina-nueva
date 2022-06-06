@@ -17,7 +17,7 @@ const settings = {
   autoplaySpeed: 2000
 };
 
-export const Clients = () => {
+export const Clients = ({dark}) => {
 
   const [t] = useTranslation("global");
 
@@ -31,13 +31,13 @@ export const Clients = () => {
       >
         <h1>
           { t("Clients.title") }
-          <br/> SerTIC
-          <hr /> 
         </h1>
+        <hr /> 
         <Slider {...settings}>
           {
             clients.map( ({ link, img, name }) =>(
               <ReturnClient 
+                dark={ dark }
                 key  = { link }
                 link = { link }
                 img  = { img } 

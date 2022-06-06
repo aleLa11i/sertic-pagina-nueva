@@ -1,22 +1,28 @@
 import React, { useState } from 'react';
 import sertic_contorno from '../../assets/sertic_contorno.png';
 import '../css/navbar.css';
-import '../css/language.css';
 import { useTranslation } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
 
-export const NavBar = () => {
+export const NavBar = ({ dark, setDark }) => {
 
   const [t, i18n] = useTranslation("global");
   const { changeLanguage } = i18n;
   const [showNavBar, setShowNavBar] = useState('collapse navbar-collapse')
   
   const setLanguage = ( language ) =>{
-    
     changeLanguage( language );
-
     localStorage.setItem('language', language);
+    show();
   };
 
+  const setTheme = ( theme ) => {
+    setDark(theme);
+    localStorage.setItem('theme', theme);
+    show();
+  }
+ 
   const show = () =>{
 
     if( showNavBar === 'collapse navbar-collapse' ){
@@ -36,7 +42,14 @@ return (
   <div
     className='fixed-top animate__animated animate__fadeInLeft'
   >
-        <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+        <nav className={`navbar navbar-expand-lg ${ 
+            dark
+              ?
+            'navbar-dark bg-dark'
+            :
+            'navbar-light bg-light'
+          }`}
+        >
         <div className='container-fluid'>
          
         <a 
@@ -146,16 +159,28 @@ return (
               </li>
 
               <li
-                className='language m-3 d-flex nav-item'
-                onClick={ show }
+                className='language m-3 d-flex nav-item item'
               >
-                <div
+                <p
                   onClick={ ()=> setLanguage('es') }
-                >ES</div>
+                >ES</p>
                 /
-                <div
+                <p
                   onClick={ ()=> setLanguage('en') }
-                >EN</div>
+                >EN</p>
+              </li>
+
+              <li
+                className='dark-light m-3 d-flex nav-item'
+                onClick={() => setTheme(!dark)}
+              >
+                {
+                  dark
+                    ?
+                  (<FontAwesomeIcon icon={ faMoon } />)
+                    :
+                  (<FontAwesomeIcon icon={ faMoon } regular/>)
+                }
               </li>
 
             </ul>

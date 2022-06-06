@@ -35,7 +35,7 @@ export const AboutUs = () => {
             <p
               className='blockquote'
             >
-                { `"${t("aboutUs.description.text1")}` }
+                {t("aboutUs.description.text1")}
               <br />
               <br />
                 <b>
@@ -52,19 +52,25 @@ export const AboutUs = () => {
               <br />
               <br />
                 <FontAwesomeIcon className='icons' icon={ faStopwatch } />
-                { `${t("aboutUs.description.text5")}"` }
+                {t("aboutUs.description.text5")}
               <br />
               <br />
+              <b>
                 {t("aboutUs.description.text6")}
+              </b>
             </p> 
           </div>
-
+        <div
+          className='sertic-img'
+        >
           <img 
-            className='mt-4 mb-2 sertic-img'
+            className='mt-4 mb-2'
             src={ serticImg } 
             alt="SerTIC - Soluciones Informáticas"
             title="SerTIC - Soluciones Informáticas"
           />
+
+        </div>
       </section>
     </div>
   );

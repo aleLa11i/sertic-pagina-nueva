@@ -32,7 +32,7 @@ const data = [
     }
 ]
 
-export const Services = () => {
+export const Services = ({ dark }) => {
 
     const [t] = useTranslation("global");
     console.log( t("services.services1.descr[0]") );
@@ -51,19 +51,24 @@ export const Services = () => {
             {
                 data.map( i =>(
                     <ReturnService 
+                        dark={ dark }
                         title={ t(`services.service${i.index}.title`) }
                         key={ i.index }
                         icon={ i.icon }
                         description={
-                            i.nItems.map(item => (
-                                <>
-                                    <p>
+                        <div
+                            className='service-box-content blockquote'
+                        >
+                            {
+                                i.nItems.map(item => (
+                                    <p
+                                        key={item}
+                                    >
                                         { t(`services.service${i.index}.descr${item}`) }
                                     </p>
-                                    <br />
-                                    <br />
-                                </>
-                            ))
+                                ))
+                            }
+                        </div>
                         }
                     />
                 ))
